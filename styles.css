@@ -1,0 +1,466 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #263b38;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+
+.header {
+    background: #ffffff;
+    min-height: 85px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 3px 15px #00000012;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: #087f68;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 15px;
+    font-size: 27px;
+}
+
+.logo h2 {
+    font-size: 14px;
+    color: #087f68;
+}
+
+.logo p {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    gap: 22px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #344b46;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #079879;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: #087f68;
+    color: white;
+    padding: 8px 12px;
+    font-size: 22px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 570px;
+    padding: 100px 9%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #063d35ed, #087f68b8),
+        url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow,
+.section-heading span,
+.location-content span {
+    color: #67e5c1;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 17px;
+    margin-bottom: 30px;
+    color: #e8fff8;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-whatsapp {
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 7px;
+    font-weight: bold;
+    margin: 5px;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: #12b98e;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #079879;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #087f68;
+}
+
+/* SECCIONES */
+
+.section,
+.mission-section,
+.staff-section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading span {
+    color: #079879;
+}
+
+.section-heading h2 {
+    color: #075c4c;
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #71817c;
+}
+
+/* NOSOTROS */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image {
+    min-height: 310px;
+    background: linear-gradient(135deg, #087f68, #20c99a);
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.medical-symbol {
+    color: white;
+    font-size: 110px;
+}
+
+.about-text h3 {
+    color: #087f68;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #65756f;
+    margin-bottom: 15px;
+}
+
+/* MISIÓN Y VISIÓN */
+
+.mission-section {
+    background: #eff9f5;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.mission-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    border-bottom: 5px solid #12b98e;
+    box-shadow: 0 8px 25px #0000000b;
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.mission-card h3 {
+    color: #087f68;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: #687873;
+}
+
+.notice {
+    margin-top: 22px;
+    color: #687873;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* SERVICIOS */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px 22px;
+    border: 1px solid #e0eee8;
+    border-radius: 12px;
+    text-align: center;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px #00000012;
+}
+
+.service-card div {
+    font-size: 40px;
+}
+
+.service-card h3 {
+    color: #087f68;
+    margin: 15px 0 8px;
+}
+
+.service-card p {
+    color: #71817c;
+    font-size: 14px;
+}
+
+/* PERSONAL */
+
+.staff-section {
+    background: #f7faf8;
+}
+
+.staff-placeholder {
+    text-align: center;
+    background: white;
+    padding: 45px;
+    border-radius: 15px;
+    max-width: 550px;
+    margin: auto;
+}
+
+.staff-icon {
+    font-size: 55px;
+}
+
+.staff-placeholder h3 {
+    color: #087f68;
+    margin: 12px;
+}
+
+/* UBICACIÓN */
+
+.location-section {
+    background: linear-gradient(120deg, #075c4c, #0c9a79);
+    color: white;
+    text-align: center;
+    padding: 85px 8%;
+}
+
+.location-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.location-content h2 {
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.location-content p {
+    margin-bottom: 25px;
+}
+
+/* CONTACTO */
+
+.contact-card {
+    max-width: 430px;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px #00000012;
+}
+
+.contact-icon {
+    font-size: 45px;
+}
+
+.contact-card h3 {
+    color: #087f68;
+    margin: 12px 0;
+}
+
+.contact-card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.btn-whatsapp {
+    background: #20b96b;
+    color: white;
+    margin-top: 20px;
+}
+
+/* PIE DE PÁGINA */
+
+.footer {
+    background: #063d35;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.footer h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #c5e8dc;
+    font-size: 13px;
+    margin: 5px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 900px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: white;
+        flex-direction: column;
+        box-shadow: 0 5px 12px #00000015;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 12px 5%;
+    }
+
+    .logo h2 {
+        font-size: 11px;
+    }
+
+    .logo p {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section,
+    .mission-section,
+    .staff-section {
+        padding: 60px 6%;
+    }
+
+    .mission-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-card {
+        padding: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+}
